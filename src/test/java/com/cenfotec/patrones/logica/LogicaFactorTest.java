@@ -6,9 +6,11 @@ import org.junit.Test;
 
 public class LogicaFactorTest {
 
+
 	@Test
-	public void pruebaError() {
-		return 0;
+	public void pruebaUno() {
+		LogicaFactor LF = new LogicaFactor();
+		assertEquals(2, LF.generate(2));
 	}
 
 }
