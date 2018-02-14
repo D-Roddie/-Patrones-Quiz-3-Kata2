@@ -6,16 +6,22 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.cenfotec.patrones.logica.LogicaFactor;
 
 
 @SpringBootApplication
 public class KataDosApplication {
 	static BufferedReader in = new BufferedReader (new InputStreamReader(System.in));
 	static PrintStream out = System.out;
-	public static void main(String[] args){
-		
+	static LogicaFactor LF = new LogicaFactor();
+	
+	
+	public static void main(String[] args) throws IOException{
+		mostrarMenu();
 	
 	}
 	
@@ -25,7 +31,6 @@ public class KataDosApplication {
 	        do {
 	            out.println("---MENU PRINCIPAL---");
 	            out.println("1. Ingresar números");
-	            out.println("2. Imprimir factores primos");
 	            out.println("Digite la opcion");
 	            opcion = Integer.parseInt(in.readLine());
 	            procesarOpcion(opcion);
@@ -37,7 +42,7 @@ public class KataDosApplication {
 
 	        switch (pOpcion) {
 	            case 1:
-	            
+	            	ingresar_numero();
 	                break;
 
 
@@ -45,5 +50,18 @@ public class KataDosApplication {
 	                out.println("Opción inválida");
 	                }
 	        }
+	 
+	 public static void ingresar_numero() {
+		 int numero = 0;
+		 System.out.println("Ingrese un número, para ver su factor primo:");
+		 try {
+			 numero = Integer.parseInt(in.readLine());
+
+		 } catch (IOException e) {
+			 
+		 }
+	 }
+	 
+
 }
 
