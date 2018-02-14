@@ -10,7 +10,7 @@ public class LogicaFactorTest {
 	@Test
 	public void pruebaUno() {
 		LogicaFactor LF = new LogicaFactor();
-		assertEquals(2, LF.generate(2));
+		assertEquals(1, LF.generate(0));
 	}
 
 }
