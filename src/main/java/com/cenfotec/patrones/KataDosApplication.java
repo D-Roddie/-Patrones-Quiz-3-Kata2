@@ -20,9 +20,7 @@ public class KataDosApplication {
 	}
 	
 	 public static void mostrarMenu() throws java.io.IOException {
-	        boolean seguir;
 	        int opcion;
-	        seguir = true;
 	        opcion = -1;
 	        do {
 	            out.println("---MENU PRINCIPAL---");
@@ -45,5 +43,7 @@ public class KataDosApplication {
 
 	            default:
 	                out.println("Opción inválida");
+	                }
 	        }
 }
+
