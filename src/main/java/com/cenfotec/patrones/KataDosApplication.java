@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -64,12 +65,12 @@ public class KataDosApplication {
 	 
 	 public static void imprimir_primos(int numero) {
 		 ArrayList<Integer> factores_primos = LF.generate(numero);
-		 System.out.println(numero);
-		 for (Integer factor: factores_primos) {
-		 //for (int i = 0; i < factores_primos.size(); i++) {
-			 System.out.print("[");
-			 System.out.print(factor);
-			 System.out.print("]");
+		 System.out.print("Los factores primos son: ");
+		 for (Iterator<Integer> i = factores_primos.iterator(); i.hasNext();) {
+			 Integer factor = i.next();
+			System.out.print("[");
+			System.out.print(factor);
+			System.out.print("]");
 			 
 		 }
 		 System.out.println();
