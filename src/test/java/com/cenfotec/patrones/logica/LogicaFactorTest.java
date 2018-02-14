@@ -24,6 +24,15 @@ public class LogicaFactorTest {
 		Factores.add(1);
 		assertEquals(Factores, logicaPrueba.generate(0));
 	}
+	
+	@Test 
+	public void pruebaTres() {
+		ArrayList<Integer> Factores = new ArrayList<>();
+		Factores.add(2);
+		Factores.add(3);
+		assertEquals(Factores, logicaPrueba.generate(6));
+	}
+
 
 
 	
