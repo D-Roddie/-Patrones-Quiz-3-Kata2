@@ -56,12 +56,23 @@ public class KataDosApplication {
 		 System.out.println("Ingrese un número, para ver su factor primo:");
 		 try {
 			 numero = Integer.parseInt(in.readLine());
-
+			 imprimir_primos(numero);
 		 } catch (IOException e) {
 			 
 		 }
 	 }
 	 
-
+	 public static void imprimir_primos(int numero) {
+		 ArrayList<Integer> factores_primos = LF.generate(numero);
+		 out.println(numero);
+		 for (Integer factor: factores_primos) {
+		 //for (int i = 0; i < factores_primos.size(); i++) {
+			 System.out.print("[");
+			 System.out.print(factor);
+			 System.out.print("]");
+			 
+		 }
+		 System.out.println();
+	 }
 }
 
